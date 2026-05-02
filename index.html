@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Studio - Best Online Camera Store in Pakistan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +92 309 0001969</span>
+                    <span><i class="fas fa-envelope"></i> info@ahmadstudio.pk</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://web.facebook.com/ahmadstudio" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com/ahmadstudio" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@ahmadstudio" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://wa.me/923090001969" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://tiktok.com/@ahmadstudio" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Ahmad<span>Studio</span></h1>
+                        <p>Photography Equipment</p>
+                    </a>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search for cameras, accessories, lights...">
+                    <button onclick="searchProducts()"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <a href="#" class="wishlist-btn" onclick="toggleWishlistModal(event)">
+                        <i class="far fa-heart"></i>
+                        <span class="badge" id="wishlistCount">0</span>
+                    </a>
+                    <a href="#" class="cart-btn" onclick="toggleCartModal(event)">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge" id="cartCount">0</span>
+                    </a>
+                    <a href="#" class="account-btn" onclick="toggleAccountModal(event)">
+                        <i class="far fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Cameras <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="menu-column">
+                                <h4><i class="fas fa-camera"></i> Mirrorless Cameras</h4>
+                                <a href="#" onclick="filterProducts('sony')">Sony</a>
+                                <a href="#" onclick="filterProducts('canon')">Canon</a>
+                                <a href="#" onclick="filterProducts('nikon')">Nikon</a>
+                                <a href="#" onclick="filterProducts('fujifilm')">Fujifilm</a>
+                                <a href="#" onclick="filterProducts('panasonic')">Panasonic</a>
+                            </div>
+                            <div class="menu-column">
+                                <h4><i class="fas fa-camera"></i> DSLR Cameras</h4>
+                                <a href="#" onclick="filterProducts('canon-dslr')">Canon DSLR</a>
+                                <a href="#" onclick="filterProducts('nikon-dslr')">Nikon DSLR</a>
+                            </div>
+                            <div class="menu-column">
+                                <h4><i class="fas fa-video"></i> Action Cameras</h4>
+                                <a href="#" onclick="filterProducts('gopro')">GoPro</a>
+                                <a href="#" onclick="filterProducts('djiaction')">DJI</a>
+                                <a href="#" onclick="filterProducts('sjcam')">SJCAM</a>
+                            </div>
+                            <div class="menu-column">
+                                <h4><i class="fas fa-helicopter"></i> Drones</h4>
+                                <a href="#" onclick="filterProducts('dji')">DJI Drones</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Lenses <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#" onclick="filterProducts('sony-lens')">Sony Lenses</a>
+                            <a href="#" onclick="filterProducts('canon-lens')">Canon Lenses</a>
+                            <a href="#" onclick="filterProducts('nikon-lens')">Nikon Lenses</a>
+                            <a href="#" onclick="filterProducts('sigma')">Sigma</a>
+                            <a href="#" onclick="filterProducts('tamron')">Tamron</a>
+                            <a href="#" onclick="filterProducts('yongnuo')">Yongnuo</a>
+                            <a href="#" onclick="filterProducts('lens-adaptor')">Lens Adaptors</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Accessories <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="menu-column">
+                                <h4><i class="fas fa-box"></i> Tripods & Monopods</h4>
+                                <a href="#" onclick="filterProducts('icon')">ICON</a>
+                                <a href="#" onclick="filterProducts('jmary-tripod')">Jmary</a>
+                                <a href="#" onclick="filterProducts('kingjoy')">Kingjoy</a>
+                                <a href="#" onclick="filterProducts('godox-tripod')">Godox</a>
+                                <a href="#" onclick="filterProducts('others-tripod')">Others</a>
+                            </div>
+                            <div class="menu-column">
+                                <h4><i class="fas fa-box"></i> Bags</h4>
+                                <a href="#" onclick="filterProducts('bags')">Camera Bags</a>
+                            </div>
+                            <div class="menu-column">
+                                <h4><i class="fas fa-battery-full"></i> Batteries</h4>
+                                <a href="#" onclick="filterProducts('canon-battery')">Canon</a>
+                                <a href="#" onclick="filterProducts('nikon-battery')">Nikon</a>
+                                <a href="#" onclick="filterProducts('sony-battery')">Sony</a>
+                                <a href="#" onclick="filterProducts('godox-battery')">Godox</a>
+                            </div>
+                            <div class="menu-column">
+                                <h4><i class="fas fa-plug"></i> Chargers</h4>
+                                <a href="#" onclick="filterProducts('canon-charger')">Canon</a>
+                                <a href="#" onclick="filterProducts('nikon-charger')">Nikon</a>
+                                <a href="#" onclick="filterProducts('sony-charger')">Sony</a>
+                                <a href="#" onclick="filterProducts('godox-charger')">Godox</a>
+                            </div>
+                            <div class="menu-column">
+                                <h4><i class="fas fa-memory"></i> Memory</h4>
+                                <a href="#" onclick="filterProducts('memory-card')">Memory Cards</a>
+                                <a href="#" onclick="filterProducts('usb-drive')">USB Flash Drives</a>
+                                <a href="#" onclick="filterProducts('hard-drive')">External Hard Drives</a>
+                            </div>
+                            <div class="menu-column">
+                                <h4><i class="fas fa-grip-vertical"></i> Other</h4>
+                                <a href="#" onclick="filterProducts('gimbals')">Gimbals</a>
+                                <a href="#" onclick="filterProducts('filters')">Filters</a>
+                                <a href="#" onclick="filterProducts('silicon-covers')">Silicon Covers</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Audio Equipments <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="menu-column">
+                                <h4><i class="fas fa-microphone"></i> BOYA</h4>
+                                <a href="#" onclick="filterProducts('boya-lavalier')">Lavalier</a>
+                                <a href="#" onclick="filterProducts('boya-shotgun')">Shotgun</a>
+                                <a href="#" onclick="filterProducts('boya-condenser')">Condenser</a>
+                                <a href="#" onclick="filterProducts('boya-dynamic')">Dynamic</a>
+                                <a href="#" onclick="filterProducts('boya-wireless')">Wireless</a>
+                            </div>
+                            <div class="menu-column">
+                                <h4><i class="fas fa-microphone"></i> Rode</h4>
+                                <a href="#" onclick="filterProducts('rode-lavalier')">Lavalier</a>
+                                <a href="#" onclick="filterProducts('rode-shotgun')">Shotgun</a>
+                                <a href="#" onclick="filterProducts('rode-condenser')">Condenser</a>
+                                <a href="#" onclick="filterProducts('rode-dynamic')">Dynamic</a>
+                                <a href="#" onclick="filterProducts('rode-wireless')">Wireless</a>
+                            </div>
+                            <div class="menu-column">
+                                <h4><i class="fas fa-microphone"></i> Other Brands</h4>
+                                <a href="#" onclick="filterProducts('synco')">Synco</a>
+                                <a href="#" onclick="filterProducts('godox-audio')">Godox</a>
+                                <a href="#" onclick="filterProducts('jmary-audio')">Jmary</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Lighting Equipments <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="menu-column">
+                                <h4><i class="fas fa-lightbulb"></i> LED Lights</h4>
+                                <a href="#" onclick="filterProducts('aputure')">Aputure Amaran</a>
+                                <a href="#" onclick="filterProducts('mamen')">Mamen</a>
+                                <a href="#" onclick="filterProducts('godox-led')">Godox</a>
+                                <a href="#" onclick="filterProducts('zsyb')">ZSYB</a>
+                            </div>
+                            <div class="menu-column">
+                                <h4><i class="fas fa-circle"></i> Ring Lights</h4>
+                                <a href="#" onclick="filterProducts('ring-light')">Ring Lights</a>
+                                <a href="#" onclick="filterProducts('youtube-light')">YouTube Lights</a>
+                                <a href="#" onclick="filterProducts('tiktok-light')">TikTok Ring Lights</a>
+                            </div>
+                            <div class="menu-column">
+                                <h4><i class="fas fa-square"></i> Softbox</h4>
+                                <a href="#" onclick="filterProducts('softbox')">Softbox</a>
+                                <a href="#" onclick="filterProducts('umbrella')">Umbrellas</a>
+                                <a href="#" onclick="filterProducts('beauty-dish')">Beauty Dish</a>
+                            </div>
+                            <div class="menu-column">
+                                <h4><i class="fas fa-lightbulb"></i> Studio Lights</h4>
+                                <a href="#" onclick="filterProducts('godox-studio')">Godox Studio Lights</a>
+                                <a href="#" onclick="filterProducts('speedlite')">Speedlites</a>
+                                <a href="#" onclick="filterProducts('strobe')">Strobe Lights</a>
+                            </div>
+                            <div class="menu-column">
+                                <h4><i class="fas fa-tools"></i> Accessories</h4>
+                                <a href="#" onclick="filterProducts('light-stand')">Light Stands</a>
+                                <a href="#" onclick="filterProducts('softbox-umbrella')">Softbox & Umbrellas</a>
+                                <a href="#" onclick="filterProducts('triggers')">Triggers</a>
+                                <a href="#" onclick="filterProducts('reflector')">Reflectors</a>
+                                <a href="#" onclick="filterProducts('backdrop')">Backdrops</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="showPage('about')">About Us</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Contact Us</a></li>
+                </ul>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button onclick="toggleMobileMenu()"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="mobile-dropdown">
+                <a href="#" onclick="toggleMobileSubmenu(this)">Cameras <i class="fas fa-chevron-down"></i></a>
+                <ul class="mobile-submenu">
+                    <li><a href="#">Mirrorless Cameras</a></li>
+                    <li><a href="#">DSLR Cameras</a></li>
+                    <li><a href="#">Action Cameras</a></li>
+                    <li><a href="#">Drones</a></li>
+                </ul>
+            </li>
+            <li class="mobile-dropdown">
+                <a href="#" onclick="toggleMobileSubmenu(this)">Lenses <i class="fas fa-chevron-down"></i></a>
+                <ul class="mobile-submenu">
+                    <li><a href="#">Sony</a></li>
+                    <li><a href="#">Canon</a></li>
+                    <li><a href="#">Nikon</a></li>
+                    <li><a href="#">Sigma</a></li>
+                </ul>
+            </li>
+            <li class="mobile-dropdown">
+                <a href="#" onclick="toggleMobileSubmenu(this)">Accessories <i class="fas fa-chevron-down"></i></a>
+                <ul class="mobile-submenu">
+                    <li><a href="#">Tripods</a></li>
+                    <li><a href="#">Bags</a></li>
+                    <li><a href="#">Batteries</a></li>
+                    <li><a href="#">Memory Cards</a></li>
+                </ul>
+            </li>
+            <li class="mobile-dropdown">
+                <a href="#" onclick="toggleMobileSubmenu(this)">Audio Equipments <i class="fas fa-chevron-down"></i></a>
+                <ul class="mobile-submenu">
+                    <li><a href="#">BOYA</a></li>
+                    <li><a href="#">Rode</a></li>
+                    <li><a href="#">Wireless</a></li>
+                </ul>
+            </li>
+            <li class="mobile-dropdown">
+                <a href="#" onclick="toggleMobileSubmenu(this)">Lighting Equipments <i class="fas fa-chevron-down"></i></a>
+                <ul class="mobile-submenu">
+                    <li><a href="#">LED Lights</a></li>
+                    <li><a href="#">Ring Lights</a></li>
+                    <li><a href="#">Softbox</a></li>
+                </ul>
+            </li>
+            <li><a href="#" onclick="showPage('about')">About Us</a></li>
+            <li><a href="#" onclick="showPage('contact')">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Your One-Stop Camera Shop</h1>
+                    <p>Ahmad Studio offers a complete range of photography and videography gear. Whether you're a beginner, a professional photographer, or a content creator - we have everything you need.</p>
+                    <a href="#products" class="btn btn-primary">Shop Now</a>
+                    <a href="#categories" class="btn btn-secondary">Browse Categories</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600" alt="Camera Shop">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+        <div class="container">
+            <div class="badges-grid">
+                <div class="badge-item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <div class="badge-text">
+                        <h4>Free Cash On Delivery</h4>
+                        <p>All over Pakistan</p>
+                    </div>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-bolt"></i>
+                    <div class="badge-text">
+                        <h4>Same Day Delivery</h4>
+                        <p>In Lahore Upto 7000</p>
+                    </div>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <div class="badge-text">
+                        <h4>Official 3 Years Warranty</h4>
+                        <p>All BOYA Products</p>
+                    </div>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-headset"></i>
+                    <div class="badge-text">
+                        <h4>Expert Customer Service</h4>
+                        <p>Choose chat or call us</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hot Categories -->
+    <section class="hot-categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hot Categories</h2>
+                <a href="#shop-categories" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="categories-grid">
+                <a href="#" class="category-card" onclick="filterProducts('boya')">
+                    <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=200" alt="BOYA">
+                    <h3>BOYA</h3>
+                </a>
+                <a href="#" class="category-card" onclick="filterProducts('jmary')">
+                    <img src="https://images.unsplash.com/photo-1617005082133-548c4dd27f35?w=200" alt="Jmary">
+                    <h3>Jmary</h3>
+                </a>
+                <a href="#" class="category-card" onclick="filterProducts('mamen')">
+                    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff70?w=200" alt="Mamen">
+                    <h3>Mamen</h3>
+                </a>
+                <a href="#" class="category-card" onclick="filterProducts('rode')">
+                    <img src="https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?w=200" alt="Rode">
+                    <h3>Rode</h3>
+                </a>
+                <a href="#" class="category-card" onclick="filterProducts('icon')">
+                    <img src="https://images.unsplash.com/photo-1519638831568-d9897f54ed69?w=200" alt="Icon">
+                    <h3>Icon</h3>
+                </a>
+                <a href="#" class="category-card" onclick="filterProducts('godox')">
+                    <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=200" alt="Godox">
+                    <h3>Godox</h3>
+                </a>
+                <a href="#" class="category-card" onclick="filterProducts('gimbals')">
+                    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=200" alt="Gimbals">
+                    <h3>Gimbals</h3>
+                </a>
+                <a href="#" class="category-card" onclick="filterProducts('caisi')">
+                    <img src="https://images.unsplash.com/photo-1519638831568-d9897f54ed69?w=200" alt="Caisi">
+                    <h3>Caisi</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Pick of the Week -->
+    <section class="best-pick">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-fire"></i> Best Pick of the Week</h2>
+            </div>
+            <div class="best-pick-grid">
+                <div class="best-pick-card main-pick">
+                    <img src="https://images.unsplash.com/photo-1520390138845-fd2d229dd552?w=400" alt="Best Product">
+                    <div class="best-pick-info">
+                        <span class="hot-badge">HOT</span>
+                        <h3>Caisi NP-FW50 1030mAh Replacement Camera Battery For Sony Alpha</h3>
+                        <div class="price">
+                            <span class="old-price">₨4,500</span>
+                            <span class="new-price">₨3,700</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(1)">Buy Now</button>
+                    </div>
+                </div>
+                <div class="best-pick-side">
+                    <div class="side-pick-card">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=150" alt="Fujifilm Instax">
+                        <div class="side-pick-info">
+                            <h4>Fujifilm Instax Mini 12</h4>
+                            <div class="price">
+                                <span class="old-price">₨32,500</span>
+                                <span class="new-price">₨30,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side-pick-card">
+                        <img src="https://images.unsplash.com/photo-1617005082133-548c4dd27f35?w=150" alt="Jmary Microphone">
+                        <div class="side-pick-info">
+                            <h4>Jmary MW-15 2.4G Wireless Mic</h4>
+                            <div class="price">
+                                <span class="new-price">₨5,500</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side-pick-card">
+                        <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff70?w=150" alt="Mamen Light">
+                        <div class="side-pick-info">
+                            <h4>Mamen SL-C60R LED Light</h4>
+                            <div class="price">
+                                <span class="old-price">₨22,500</span>
+                                <span class="new-price">₨21,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <div class="tabs">
+                    <button class="tab active" data-filter="all" onclick="filterProducts('all')">All</button>
+                    <button class="tab" data-filter="camera" onclick="filterProducts('camera')">Cameras</button>
+                    <button class="tab" data-filter="audio" onclick="filterProducts('audio')">Audio</button>
+                    <button class="tab" data-filter="lighting" onclick="filterProducts('lighting')">Lighting</button>
+                    <button class="tab" data-filter="accessories" onclick="filterProducts('accessories')">Accessories</button>
+                </div>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop by Categories -->
+    <section class="shop-categories" id="shop-categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop by Categories</h2>
+            </div>
+            <div class="shop-categories-grid">
+                <a href="#" class="shop-category-card" onclick="filterProducts('accessories')">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=200" alt="Accessories">
+                    <h3>Accessories</h3>
+                </a>
+                <a href="#" class="shop-category-card" onclick="filterProducts('cameras')">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=200" alt="Cameras">
+                    <h3>Cameras</h3>
+                </a>
+                <a href="#" class="shop-category-card" onclick="filterProducts('lenses')">
+                    <img src="https://images.unsplash.com/photo-1617005082133-548c4dd27f35?w=200" alt="Lenses">
+                    <h3>Lenses</h3>
+                </a>
+                <a href="#" class="shop-category-card" onclick="filterProducts('audio-equipments')">
+                    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff70?w=200" alt="Audio Equipments">
+                    <h3>Audio Equipments</h3>
+                </a>
+                <a href="#" class="shop-category-card" onclick="filterProducts('lighting-equipments')">
+                    <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=200" alt="Lighting Equipments">
+                    <h3>Lighting Equipments</h3>
+                </a>
+                <a href="#" class="shop-category-card" onclick="filterProducts('studio-lights')">
+                    <img src="https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?w=200" alt="Studio Lights">
+                    <h3>Studio Lights</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Ahmad Studio?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>100% Genuine Products</h3>
+                    <p>We deal only in original, brand-authorized products.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-tags"></i>
+                    <h3>Competitive Prices</h3>
+                    <p>Get the best value with seasonal deals and bundle offers.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Nationwide Delivery</h3>
+                    <p>We deliver to all major cities in Pakistan including Karachi, Lahore, Islamabad, Rawalpindi, Faisalabad, and more.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-headset"></i>
+                    <h3>Expert Support</h3>
+                    <p>Not sure what gear suits your needs? Our camera experts are here to help!</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-lock"></i>
+                    <h3>Secure Shopping</h3>
+                    <p>Shop with confidence using safe and trusted payment methods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Products -->
+    <section class="top-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Top Products</h2>
+                <a href="#products" class="view-all" onclick="filterProducts('all')">Shop More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="top-products-grid">
+                <div class="top-product-card" onclick="quickView(1)">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=200" alt="5 in 1 Reflector">
+                    <div class="product-details">
+                        <h3>5 in 1 Reflector (5 Colors)</h3>
+                        <div class="price">
+                            <span class="old-price">₨4,000</span>
+                            <span class="new-price">₨3,500</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-product-card" onclick="quickView(2)">
+                    <img src="https://images.unsplash.com/photo-1519638831568-d9897f54ed69?w=200" alt="Backdrop Stand">
+                    <div class="product-details">
+                        <h3>Amzdeal Backdrop Stand Kits with 3 Chroma Clothes</h3>
+                        <div class="price">
+                            <span class="old-price">₨15,000</span>
+                            <span class="new-price">₨8,500</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-product-card" onclick="quickView(3)">
+                    <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=200" alt="Aputure Light">
+                    <div class="product-details">
+                        <h3>Aputure Amaran 100X S Bi-Color Continues Light</h3>
+                        <div class="price">
+                            <span class="old-price">₨68,000</span>
+                            <span class="new-price">₨65,000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-product-card" onclick="quickView(4)">
+                    <img src="https://images.unsplash.com/photo-1617005082133-548c4dd27f35?w=200" alt="Aputure RGB">
+                    <div class="product-details">
+                        <h3>Aputure Amaran 150C RGB Continues Light</h3>
+                        <div class="price">
+                            <span class="old-price">₨100,000</span>
+                            <span class="new-price">₨98,000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-product-card" onclick="quickView(5)">
+                    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff70?w=200" alt="Backdrop Paper">
+                    <div class="product-details">
+                        <h3>Backdrop Paper Roll Size 9x36 Feet</h3>
+                        <div class="price">
+                            <span class="new-price">₨18,500</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Products -->
+    <section class="latest-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Products</h2>
+            </div>
+            <div class="latest-products-grid">
+                <div class="product-card">
+                    <span class="sale-badge">-20%</span>
+                    <button class="wishlist" onclick="toggleWishlist(1)"><i class="far fa-heart"></i></button>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=300" alt="ZSYB W80B">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Lighting Equipments</span>
+                        <h3>ZSYB W80B 80W Handheld Outdoor Photography Light</h3>
+                        <div class="price">
+                            <span class="old-price">₨27,500</span>
+                            <span class="new-price">₨22,000</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart(10)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <button class="wishlist" onclick="toggleWishlist(2)"><i class="far fa-heart"></i></button>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff70?w=300" alt="ZSYB CL-80Bi">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Lighting Equipments</span>
+                        <h3>ZSYB CL-80Bi Bi-Color 3200-5600K LED Light</h3>
+                        <div class="price">
+                            <span class="new-price">₨16,500</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart(11)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <span class="sale-badge">-12%</span>
+                    <button class="wishlist" onclick="toggleWishlist(3)"><i class="far fa-heart"></i></button>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1520390138845-fd2d229dd552?w=300" alt="Zoom H6">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Audio Equipments</span>
+                        <h3>Zoom H6 All Black 6-Input/6-Track Portable Handy Recorder</h3>
+                        <div class="price">
+                            <span class="old-price">₨85,000</span>
+                            <span class="new-price">₨75,000</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart(12)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <span class="sale-badge">-29% HOT</span>
+                    <button class="wishlist" onclick="toggleWishlist(4)"><i class="far fa-heart"></i></button>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1617005082133-548c4dd27f35?w=300" alt="Mamen RGB">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Lighting Equipments</span>
+                        <h3>Mamen Sl-B06 LED RGB Stick Light (2500K-9900K)</h3>
+                        <div class="price">
+                            <span class="old-price">₨28,000</span>
+                            <span class="new-price">₨20,000</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart(13)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Products -->
+    <section class="popular-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular Products</h2>
+                <a href="#products" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="popular-products-grid">
+                <div class="product-card">
+                    <span class="sale-badge">-16%</span>
+                    <button class="wishlist" onclick="toggleWishlist(5)"><i class="far fa-heart"></i></button>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1519638831568-d9897f54ed69?w=300" alt="Light Stand">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Lighting Equipments</span>
+                        <h3>Caisi CS-S210 Pro Profession LED Light Stand</h3>
+                        <div class="price">
+                            <span class="old-price">₨2,500</span>
+                            <span class="new-price">₨2,100</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart(14)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <span class="sale-badge">-23%</span>
+                    <button class="wishlist" onclick="toggleWishlist(6)"><i class="far fa-heart"></i></button>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1520390138845-fd2d229dd552?w=300" alt="Dual Charger">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Accessories</span>
+                        <h3>Caisi Dual Charger For Sony FW50 Battery</h3>
+                        <div class="price">
+                            <span class="old-price">₨3,000</span>
+                            <span class="new-price">₨2,300</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart(15)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <span class="sale-badge hot">HOT</span>
+                    <button class="wishlist" onclick="toggleWishlist(7)"><i class="far fa-heart"></i></button>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1519638831568-d9897f54ed69?w=300" alt="Sony Battery">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Accessories</span>
+                        <h3>Caisi NP-FW50 1030mAh Replacement Camera Battery</h3>
+                        <div class="price">
+                            <span class="old-price">₨4,500</span>
+                            <span class="new-price">₨3,700</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart(16)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <span class="sale-badge hot">HOT</span>
+                    <button class="wishlist" onclick="toggleWishlist(8)"><i class="far fa-heart"></i></button>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff70?w=300" alt="Mamen Light">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Lighting Equipments</span>
+                        <h3>Mamen SL-C60R LED Video BI Color +RGB Light</h3>
+                        <div class="price">
+                            <span class="old-price">₨22,500</span>
+                            <span class="new-price">₨21,000</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart(17)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Buy Cameras & Accessories from best Online camera store in Pakistan – Top Brands at Ahmad Studio</h2>
+                    <p>In today's digital age, high-quality visuals are a must – whether you're a professional photographer, a content creator, or someone who loves capturing life's precious moments. If you're looking for the best online camera store in Pakistan, Ahmad Studio is your trusted destination.</p>
+                    
+                    <h3>Your One-Stop Camera Shop</h3>
+                    <p>Ahmad Studio offers a complete range of photography and videography gear, including:</p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check"></i> <strong>Top Camera Brands:</strong> Canon, Nikon, Sony, Fujifilm, Panasonic, GoPro, and more.</li>
+                        <li><i class="fas fa-check"></i> <strong>Camera Accessories:</strong> Tripods, batteries, memory cards, camera bags, and cleaning kits.</li>
+                        <li><i class="fas fa-check"></i> <strong>Microphones:</strong> Wired and wireless mics for vlogging, interviews, podcasts, and professional recordings.</li>
+                        <li><i class="fas fa-check"></i> <strong>Ring Lights:</strong> Perfect lighting solutions for makeup artists, YouTubers, and streamers.</li>
+                    </ul>
+                    <p>Whether you're buying your first DSLR or upgrading your mirrorless camera setup, our wide selection guarantees you'll find exactly what you need — at the right price.</p>
+                    
+                    <h3>For Creators, Photographers & Filmmakers</h3>
+                    <p>At Ahmad Studio, we understand the needs of every level of creator. Whether you're a beginner, a travel vlogger, a wedding photographer, or a studio professional — we have the tools you need to bring your vision to life.</p>
+                    
+                    <a href="#products" class="btn btn-primary">Start Shopping Today</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500" alt="About Ahmad Studio">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Join our mailing list to receive any latest updates and promotions.</p>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" id="newsletterEmail" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Ahmad<span>Studio</span></h3>
+                    <p>Your trusted destination for photography and videography equipment in Pakistan. We offer top brands at competitive prices with nationwide delivery.</p>
+                    <div class="footer-social">
+                        <a href="https://web.facebook.com/ahmadstudio" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com/ahmadstudio" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@ahmadstudio" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/923090001969" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Get to Know Us</h4>
+                    <ul>
+                        <li><a href="#" onclick="showPage('about')">About Us</a></li>
+                        <li><a href="#" onclick="showPage('contact')">Contact Us</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">Cameras</a></li>
+                        <li><a href="#">Lenses</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Audio Equipments</a></li>
+                        <li><a href="#">Lighting Equipments</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Pakistan</li>
+                        <li><i class="fas fa-phone"></i> +92 309 0001969</li>
+                        <li><i class="fas fa-envelope"></i> info@ahmadstudio.pk</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ahmad Studio. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fas fa-university"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-shopping-cart"></i> Shopping Cart</h3>
+                <button class="close-modal" onclick="toggleCartModal(event)"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body" id="cartItems">
+                <p class="empty-cart">Your cart is empty</p>
+            </div>
+            <div class="modal-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">₨0</span>
+                </div>
+                <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wishlist Modal -->
+    <div class="modal" id="wishlistModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-heart"></i> Wishlist</h3>
+                <button class="close-modal" onclick="toggleWishlistModal(event)"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body" id="wishlistItems">
+                <p class="empty-wishlist">Your wishlist is empty</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Account Modal -->
+    <div class="modal" id="accountModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-user"></i> My Account</h3>
+                <button class="close-modal" onclick="toggleAccountModal(event)"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form class="login-form" onsubmit="login(event)">
+                    <h4>Sign In</h4>
+                    <input type="email" placeholder="Email address" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                </form>
+                <div class="register-link">
+                    <p>No account yet? <a href="#">Create An Account</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content quick-view-content">
+            <div class="modal-header">
+                <h3>Product Quick View</h3>
+                <button class="close-modal" onclick="closeQuickView()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body" id="quickViewContent">
+                <!-- Quick view content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" onclick="toggleChat()">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <!-- Chat Modal -->
+    <div class="modal chat-modal" id="chatModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-comments"></i> Chat with Us</h3>
+                <button class="close-modal" onclick="toggleChat()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body chat-body">
+                <div class="chat-messages">
+                    <div class="chat-message bot">
+                        <p>Hello! How can I help you today?</p>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message..." id="chatInput" onkeypress="handleChatKeyPress(event)">
+                    <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span id="toastMessage"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +92 309 0001969</span>
+                    <span><i class="fas fa-envelope"></i> info@ahmadstudio.pk</span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Ahmad<span>Studio</span></h1>
+                        <p>Photography Equipment</p>
+                    </a>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search for cameras, accessories, lights...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <a href="#" class="wishlist-btn">
+                        <i class="far fa-heart"></i>
+                        <span class="badge">0</span>
+                    </a>
+                    <a href="#" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge">0</span>
+                    </a>
+                    <a href="#" class="account-btn">
+                        <i class="far fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Cameras <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="menu-column">
+                                <h4>Mirrorless</h4>
+                                <a href="#">Sony</a>
+                                <a href="#">Canon</a>
+                                <a href="#">Nikon</a>
+                                <a href="#">Fujifilm</a>
+                            </div>
+                            <div class="menu-column">
+                                <h4>DSLR</h4>
+                                <a href="#">Canon DSLR</a>
+                                <a href="#">Nikon DSLR</a>
+                            </div>
+                            <div class="menu-column">
+                                <h4>Action Cameras</h4>
+                                <a href="#">GoPro</a>
+                                <a href="#">DJI</a>
+                                <a href="#">SJCAM</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Lenses <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#">Sony</a>
+                            <a href="#">Canon</a>
+                            <a href="#">Nikon</a>
+                            <a href="#">Sigma</a>
+                            <a href="#">Tamron</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Accessories <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#">Tripods</a>
+                            <a href="#">Bags</a>
+                            <a href="#">Batteries</a>
+                            <a href="#">Memory Cards</a>
+                            <a href="#">Gimbals</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Audio <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#">Microphones</a>
+                            <a href="#">BOYA</a>
+                            <a href="#">Rode</a>
+                            <a href="#">Wireless</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Lighting <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#">LED Lights</a>
+                            <a href="#">Ring Lights</a>
+                            <a href="#">Softbox</a>
+                            <a href="#">Godox</a>
+                        </div>
+                    </li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Your One-Stop Camera Shop</h1>
+                    <p>Discover the best photography and videography equipment in Pakistan. Top brands at competitive prices with nationwide delivery.</p>
+                    <a href="#products" class="btn btn-primary">Shop Now</a>
+                    <a href="#categories" class="btn btn-secondary">Browse Categories</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600" alt="Camera">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+        <div class="container">
+            <div class="badges-grid">
+                <div class="badge-item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <div class="badge-text">
+                        <h4>Free Cash On Delivery</h4>
+                        <p>All over Pakistan</p>
+                    </div>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-bolt"></i>
+                    <div class="badge-text">
+                        <h4>Same Day Delivery</h4>
+                        <p>In Lahore</p>
+                    </div>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <div class="badge-text">
+                        <h4>3 Years Warranty</h4>
+                        <p>On BOYA Products</p>
+                    </div>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-headset"></i>
+                    <div class="badge-text">
+                        <h4>Expert Support</h4>
+                        <p>Chat or Call Us</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hot Categories -->
+    <section class="hot-categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hot Categories</h2>
+            </div>
+            <div class="categories-grid">
+                <a href="#" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=200" alt="BOYA">
+                    <h3>BOYA</h3>
+                </a>
+                <a href="#" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1617005082133-548c4dd27f35?w=200" alt="Jmary">
+                    <h3>Jmary</h3>
+                </a>
+                <a href="#" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff70?w=200" alt="Mamen">
+                    <h3>Mamen</h3>
+                </a>
+                <a href="#" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?w=200" alt="Rode">
+                    <h3>Rode</h3>
+                </a>
+                <a href="#" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1519638831568-d9897f54ed69?w=200" alt="Icon">
+                    <h3>Icon</h3>
+                </a>
+                <a href="#" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=200" alt="Godox">
+                    <h3>Godox</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <div class="tabs">
+                    <button class="tab active" data-filter="all">All</button>
+                    <button class="tab" data-filter="camera">Cameras</button>
+                    <button class="tab" data-filter="audio">Audio</button>
+                    <button class="tab" data-filter="lighting">Lighting</button>
+                </div>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <span class="sale-badge">-16%</span>
+                    <button class="wishlist"><i class="far fa-heart"></i></button>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=300" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Lighting Equipments</span>
+                        <h3>Caisi CS-S210 Pro Profession LED Light Stand</h3>
+                        <div class="price">
+                            <span class="old-price">₨2,500</span>
+                            <span class="new-price">₨2,100</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <span class="sale-badge">-23%</span>
+                    <button class="wishlist"><i class="far fa-heart"></i></button>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1520390138845-fd2d229dd552?w=300" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Accessories</span>
+                        <h3>Caisi Dual Charger For Sony FW50 Battery</h3>
+                        <div class="price">
+                            <span class="old-price">₨3,000</span>
+                            <span class="new-price">₨2,300</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <span class="sale-badge hot">HOT</span>
+                    <button class="wishlist"><i class="far fa-heart"></i></button>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1519638831568-d9897f54ed69?w=300" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Accessories</span>
+                        <h3>Caisi NP-FW50 1030mAh Replacement Camera Battery</h3>
+                        <div class="price">
+                            <span class="old-price">₨4,500</span>
+                            <span class="new-price">₨3,700</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <span class="sale-badge hot">HOT</span>
+                    <button class="wishlist"><i class="far fa-heart"></i></button>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=300" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Lighting Equipments</span>
+                        <h3>Mamen SL-C60R LED Video BI Color +RGB Light</h3>
+                        <div class="price">
+                            <span class="old-price">₨22,500</span>
+                            <span class="new-price">₨21,000</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <span class="sale-badge hot">HOT</span>
+                    <button class="wishlist"><i class="far fa-heart"></i></button>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?w=300" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Lighting Equipments</span>
+                        <h3>Mamen Sl-B06 LED RGB Stick Light</h3>
+                        <div class="price">
+                            <span class="old-price">₨28,000</span>
+                            <span class="new-price">₨20,000</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <span class="sale-badge hot">HOT</span>
+                    <button class="wishlist"><i class="far fa-heart"></i></button>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1617005082133-548c4dd27f35?w=300" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Tripods & Monopods</span>
+                        <h3>Jmary KP-2208 Multifunctional Tripod + Monopod</h3>
+                        <div class="price">
+                            <span class="old-price">₨4,000</span>
+                            <span class="new-price">₨3,500</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <button class="wishlist"><i class="far fa-heart"></i></button>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff70?w=300" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Audio Equipments</span>
+                        <h3>Jmary MW-15 2.4G Wireless Microphone (Type-C)</h3>
+                        <div class="price">
+                            <span class="new-price">₨5,500</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <span class="sale-badge">-12%</span>
+                    <button class="wishlist"><i class="far fa-heart"></i></button>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1520390138845-fd2d229dd552?w=300" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Audio Equipments</span>
+                        <h3>BOYA Mini 17 For Android Type C Wireless Mic</h3>
+                        <div class="price">
+                            <span class="old-price">₨9,000</span>
+                            <span class="new-price">₨7,900</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop by Categories -->
+    <section class="shop-categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop by Categories</h2>
+            </div>
+            <div class="shop-categories-grid">
+                <a href="#" class="shop-category-card">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=200" alt="Accessories">
+                    <h3>Accessories</h3>
+                </a>
+                <a href="#" class="shop-category-card">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=200" alt="Cameras">
+                    <h3>Cameras</h3>
+                </a>
+                <a href="#" class="shop-category-card">
+                    <img src="https://images.unsplash.com/photo-1617005082133-548c4dd27f35?w=200" alt="Lenses">
+                    <h3>Lenses</h3>
+                </a>
+                <a href="#" class="shop-category-card">
+                    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff70?w=200" alt="Audio Equipments">
+                    <h3>Audio Equipments</h3>
+                </a>
+                <a href="#" class="shop-category-card">
+                    <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=200" alt="Lighting Equipments">
+                    <h3>Lighting Equipments</h3>
+                </a>
+                <a href="#" class="shop-category-card">
+                    <img src="https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?w=200" alt="Studio Lights">
+                    <h3>Studio Lights</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Ahmad Studio?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>100% Genuine Products</h3>
+                    <p>We deal only in original, brand-authorized products.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-tags"></i>
+                    <h3>Competitive Prices</h3>
+                    <p>Get the best value with seasonal deals and bundle offers.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Nationwide Delivery</h3>
+                    <p>We deliver to all major cities in Pakistan.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-headset"></i>
+                    <h3>Expert Support</h3>
+                    <p>Our camera experts are here to help!</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-lock"></i>
+                    <h3>Secure Shopping</h3>
+                    <p>Shop with confidence using safe payment methods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Products -->
+    <section class="top-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Top Products</h2>
+                <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="top-products-grid">
+                <div class="top-product-card">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=200" alt="5 in 1 Reflector">
+                    <div class="product-details">
+                        <h3>5 in 1 Reflector (5 Colors)</h3>
+                        <div class="price">
+                            <span class="old-price">₨4,000</span>
+                            <span class="new-price">₨3,500</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-product-card">
+                    <img src="https://images.unsplash.com/photo-1519638831568-d9897f54ed69?w=200" alt="Backdrop Stand">
+                    <div class="product-details">
+                        <h3>Amzdeal Backdrop Stand Kits</h3>
+                        <div class="price">
+                            <span class="old-price">₨15,000</span>
+                            <span class="new-price">₨8,500</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-product-card">
+                    <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=200" alt="Aputure Light">
+                    <div class="product-details">
+                        <h3>Aputure Amaran 100X S Bi-Color</h3>
+                        <div class="price">
+                            <span class="old-price">₨68,000</span>
+                            <span class="new-price">₨65,000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-product-card">
+                    <img src="https://images.unsplash.com/photo-1617005082133-548c4dd27f35?w=200" alt="Aputure RGB">
+                    <div class="product-details">
+                        <h3>Aputure Amaran 150C RGB</h3>
+                        <div class="price">
+                            <span class="old-price">₨100,000</span>
+                            <span class="new-price">₨98,000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-product-card">
+                    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff70?w=200" alt="Backdrop Paper">
+                    <div class="product-details">
+                        <h3>Backdrop Paper Roll 9x36 Feet</h3>
+                        <div class="price">
+                            <span class="new-price">₨18,500</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Join our mailing list to receive the latest updates and promotions.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Ahmad Studio</h3>
+                    <p>Your trusted destination for photography and videography equipment in Pakistan. We offer top brands at competitive prices.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Cameras</a></li>
+                        <li><a href="#">Lenses</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Audio Equipments</a></li>
+                        <li><a href="#">Lighting Equipments</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Pakistan</li>
+                        <li><i class="fas fa-phone"></i> +92 309 0001969</li>
+                        <li><i class="fas fa-envelope"></i> info@ahmadstudio.pk</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ahmad Studio. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
